@@ -1,0 +1,101 @@
+.admin-staff {
+  padding: 20px;
+}
+
+/* Title */
+.admin-staff-title {
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* Staff Card */
+.staff-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin-bottom: 14px;
+  width: 500px;
+  border-radius: 12px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 0.35s ease;
+}
+
+/* Info */
+.staff-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.staff-name {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.staff-fees {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+}
+
+.staff-restaurant {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Actions */
+.staff-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #111;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn-secondary {
+  background: #f1f1f1;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-danger {
+  background: #ff3b3b;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-danger:hover {
+  transform: translateY(-2px);
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

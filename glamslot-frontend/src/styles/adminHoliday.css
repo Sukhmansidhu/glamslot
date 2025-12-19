@@ -1,0 +1,91 @@
+.admin-holiday {
+  padding: 30px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.admin-holiday-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.holiday-form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.holiday-input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  min-width: 200px;
+}
+
+.holiday-input:focus {
+  border-color: #000;
+}
+
+/* Button */
+.holiday-btn {
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #111, #000);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.holiday-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* List */
+.holiday-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.holiday-item {
+  background: #fff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease;
+}
+
+.holiday-item:hover {
+  transform: translateY(-3px);
+}
+
+.holiday-text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Delete Button */
+.holiday-delete {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #dc2626;
+  transition: transform 0.2s ease;
+}
+
+.holiday-delete:hover {
+  transform: scale(1.2);
+}

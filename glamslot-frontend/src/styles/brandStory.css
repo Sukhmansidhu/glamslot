@@ -1,0 +1,75 @@
+.brand {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 90vh;
+  padding: 80px 8%;
+  gap: 60px;
+  background: #ffffff;
+}
+
+.brand-image {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  background-image: url("../assets/images/BrandStory.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: slideLeft 1.2s ease forwards;
+}
+
+.brand-content {
+  animation: slideRight 1.2s ease forwards;
+}
+
+.brand-content h2 {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.brand-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .brand {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .brand-image {
+    min-height: 300px;
+  }
+
+  .brand-content h2 {
+    font-size: 30px;
+  }
+}

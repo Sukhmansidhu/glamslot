@@ -1,0 +1,366 @@
+.gift-page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8f6f4, #ffffff);
+  font-family: "Inter", system-ui, sans-serif;
+  color: #111;
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 14px 22px;
+  border-radius: 14px;
+  color: #fff;
+  font-weight: 600;
+  z-index: 2000;
+  animation: slideToast 0.4s ease;
+}
+
+.toast.success { background: #16a34a; }
+.toast.error { background: #dc2626; }
+
+@keyframes slideToast {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.gift-hero {
+  padding: 120px 20px 100px;
+  text-align: center;
+  background: radial-gradient(
+    circle at top,
+    #1c1c1c,
+    #000000
+  );
+  color: #fff;
+}
+
+.gift-hero h1 {
+  font-size: 54px;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+.gift-hero p {
+  max-width: 680px;
+  margin: auto;
+  font-size: 18px;
+  color: #d6d6d6;
+  line-height: 30px;
+}
+
+.gift-grid {
+  padding: 100px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gift-card {
+  background: #fff;
+  border-radius: 28px;
+  padding: 40px 32px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+  transition: all 0.45s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.gift-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0,0,0,0.06),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gift-card:hover::after {
+  opacity: 1;
+}
+
+.gift-card:hover {
+  transform: translateY(-14px);
+  box-shadow: 0 45px 80px rgba(0,0,0,0.18);
+}
+
+.gift-card img {
+  width: 90px;
+  margin-bottom: 18px;
+}
+
+.gift-card h2 {
+  font-size: 36px;
+  margin-bottom: 6px;
+}
+
+.gift-card p {
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.gift-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0;
+}
+
+.gift-card li {
+  font-size: 14px;
+  line-height: 26px;
+  color: #444;
+}
+
+.gift-card button {
+  margin-top: 20px;
+  padding: 14px 34px;
+  border-radius: 999px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gift-card button:hover {
+  transform: scale(1.06);
+}
+
+.gift-benefits {
+  padding: 120px 20px;
+  background: #f6f6f6;
+  text-align: center;
+}
+
+.gift-benefits h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.benefits-grid div {
+  background: #fff;
+  padding: 34px;
+  border-radius: 22px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+}
+
+.benefits-grid h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.gift-steps {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.gift-steps h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 36px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.step-card {
+  padding: 30px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #111, #000);
+  color: #fff;
+  box-shadow: 0 25px 55px rgba(0,0,0,0.3);
+}
+
+.step-card h3 {
+  margin-bottom: 8px;
+}
+
+.gift-occasions {
+  padding: 100px 20px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.gift-occasions h2 {
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+
+.occasion-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+}
+
+.occasion-grid span {
+  padding: 12px 26px;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  font-weight: 600;
+}
+
+.gift-trust {
+  padding: 120px 20px;
+  background: linear-gradient(180deg, #000, #111);
+  color: #fff;
+  text-align: center;
+}
+
+.gift-trust h2 {
+  font-size: 42px;
+  margin-bottom: 14px;
+}
+
+.gift-trust p {
+  max-width: 720px;
+  margin: auto;
+  color: #ccc;
+  line-height: 30px;
+}
+
+.gift-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.25s ease;
+}
+
+.gift-modal {
+  background: #fff;
+  width: 430px;
+  height: 400px;
+  max-width: calc(100% - 32px);
+  padding: 36px;
+  border-radius: 26px;
+  box-shadow: 0 40px 90px rgba(0,0,0,0.45);
+  animation: scaleIn 0.3s ease;
+}
+
+.gift-modal h3 {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.gift-modal p {
+  margin-bottom: 18px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #444;
+}
+
+.gift-modal input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  border: 1px solid #3e3838;
+  font-size: 14px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gift-modal input:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.15);
+}
+
+.gift-modal button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gift-modal button:first-of-type {
+  background: #000;
+  color: #fff;
+}
+
+.gift-modal button:first-of-type:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.gift-modal .cancel-btn {
+  background: transparent;
+  color: #666;
+}
+
+.gift-modal .cancel-btn:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+  .gift-hero h1 { font-size: 38px; }
+  .gift-benefits h2,
+  .gift-steps h2,
+  .gift-occasions h2,
+  .gift-trust h2 { font-size: 30px; }
+}

@@ -1,0 +1,235 @@
+/* ================= ROOT ================= */
+.booking-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 6vw 80px;
+  background:
+    radial-gradient(circle at top, #f5f5f5, #ededed);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: #111;
+}
+
+/* ================= PAGE TITLE ================= */
+.page-title {
+  font-size: clamp(34px, 4vw, 46px);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  margin-bottom: 35px;
+}
+
+/* ================= STEP SECTION ================= */
+.booking-step {
+  margin-bottom: 55px;
+}
+
+/* step heading */
+.step-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: -0.3px;
+}
+
+/* ================= SERVICE HERO ================= */
+.service-info {
+  width: 100%;
+  padding: 36px 40px;
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, #000, #1a1a1a);
+  color: #fff;
+  box-shadow:
+    0 40px 80px rgba(0,0,0,0.35);
+  margin-bottom: 55px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* golden glow */
+.service-info::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle, rgba(212,175,55,0.25), transparent 60%);
+}
+
+.service-info h2 {
+  font-size: clamp(28px, 3vw, 36px);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.service-info p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.service-meta {
+  margin-top: 10px;
+  font-weight: 700;
+  color: #d4af37;
+}
+
+/* ================= STAFF ================= */
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 26px;
+}
+
+.staff-card {
+  padding: 22px;
+  border-radius: 20px;
+  background: #fff;
+  cursor: pointer;
+  border: 2px solid transparent;
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.12);
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+/* hover lift */
+.staff-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 28px 60px rgba(0,0,0,0.2);
+}
+
+/* active */
+.staff-card.active {
+  border-color: #d4af37;
+  box-shadow:
+    0 0 0 6px rgba(212,175,55,0.2),
+    0 28px 60px rgba(0,0,0,0.25);
+}
+
+/* disabled */
+.staff-card.disabled {
+  opacity: 0.45;
+  filter: grayscale(1);
+  cursor: not-allowed;
+}
+
+.staff-card strong {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.staff-card p {
+  margin-top: 6px;
+}
+
+.staff-rating {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #555;
+}
+
+/* ================= DATE ================= */
+.date-picker {
+  background: #fff;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.12);
+  max-width: 420px;
+}
+
+.date-picker input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 15px;
+  border-radius: 14px;
+  border: 2px solid #ddd;
+  font-weight: 600;
+}
+
+.date-picker input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+/* ================= GIFT ================= */
+.gift-section {
+  background:
+    linear-gradient(135deg, #fff, #f7f7f7);
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.12);
+  max-width: 520px;
+}
+
+.gift-section input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: 2px solid #ddd;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.gift-section button {
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.discount-text {
+  margin-top: 10px;
+  font-weight: 800;
+  color: #2e7d32;
+}
+
+/* ================= WALLET ================= */
+.wallet-section {
+  margin-top: 20px;
+  padding: 18px 22px;
+  border-radius: 16px;
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.wallet-section input {
+  accent-color: #d4af37;
+  margin-right: 8px;
+}
+
+/* ================= MESSAGE ================= */
+.booking-message {
+  margin-top: 40px;
+  padding: 26px 30px;
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  color: #1b5e20;
+  font-size: 17px;
+  font-weight: 800;
+  white-space: pre-line;
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.25);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .booking-page {
+    padding: 40px 18px;
+  }
+
+  .service-info {
+    padding: 26px;
+  }
+
+  .page-title {
+    text-align: center;
+  }
+}

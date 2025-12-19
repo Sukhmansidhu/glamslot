@@ -1,0 +1,132 @@
+.salon-page {
+  background: #000;
+  color: #fff;
+}
+
+.salon-hero {
+  height: 70vh;
+  background: url("../assets/images/salonfinder.png") center/cover no-repeat;
+  background-position: 50% 20%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.salon-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.salon-title {
+  position: absolute;
+  top: 30%;
+  font-size: 72px;
+  font-weight: 900;
+  letter-spacing: 6px;
+  z-index: 2;
+}
+
+.salon-search-bar {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  background: #000;
+  border: 2px solid #fff;
+  z-index: 2;
+  width: 700px;
+  max-width: 90%;
+}
+
+.salon-search-bar input {
+  flex: 1;
+  padding: 16px;
+  border: none;
+  outline: none;
+}
+
+.salon-search-bar select {
+  padding: 16px;
+  border: none;
+  outline: none;
+}
+
+.salon-search-bar button {
+  background: #000;
+  color: #fff;
+  border-left: 2px solid #fff;
+  padding: 0 30px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.salon-search-bar button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.salon-results {
+  background: #111;
+  padding: 80px 20px;
+}
+
+.salon-card {
+  background: #fff;
+  color: #000;
+  max-width: 1100px;
+  margin: 0 auto 24px;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.salon-card:hover {
+  transform: translateY(-8px);
+}
+
+.salon-card b {
+  font-size: 22px;
+  display: block;
+}
+
+.salon-card small {
+  color: #555;
+  display: block;
+}
+
+.salon-card p {
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.salon-card iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 14px;
+  margin-top: 14px;
+}
+
+.empty-text {
+  text-align: center;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .salon-title {
+    font-size: 44px;
+    text-align: center;
+  }
+
+  .salon-search-bar {
+    flex-direction: column;
+  }
+
+  .salon-search-bar button {
+    width: 100%;
+    padding: 14px;
+  }
+}

@@ -1,0 +1,49 @@
+.admin-salon {
+  padding: 30px;
+  max-width: 520px;
+  margin: auto;
+}
+
+.admin-salon-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.admin-salon-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.admin-salon-form input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.admin-salon-form input:focus {
+  outline: none;
+  border-color: black;
+}
+
+.btn-primary {
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}

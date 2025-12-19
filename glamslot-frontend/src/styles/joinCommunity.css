@@ -1,0 +1,80 @@
+.community {
+  padding: 140px 24px;
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.community-content {
+  max-width: 720px;
+}
+
+.community-content span {
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  color: #aaa;
+}
+
+.community-content h2 {
+  font-size: 44px;
+  font-weight: 900;
+  margin: 20px 0;
+}
+
+.community-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #ccc;
+  margin-bottom: 50px;
+}
+
+.community-actions {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.btn-primary1 {
+  padding: 3px 13px;
+  border-radius: 30px;
+  background: #0f0d0d;
+  border: 1px solid #cec9c9;
+  color: #f8f0f0;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.6px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary1:hover {
+  background: #eaeaea;
+  color: #111;
+  transform: translateY(-3px);
+}
+
+.btn-secondary1 {
+  padding: 26px 32px;
+  border-radius: 30px;
+  border: 1px solid #cec9c9;
+  color: #f8f6f6;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary1:hover {
+  background: #fff;
+  color: #111;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .community-content h2 {
+    font-size: 34px;
+  }
+}

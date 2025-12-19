@@ -1,0 +1,104 @@
+.campaign {
+  min-height: 90vh;
+  width: 100%;
+  background-image: url("../assets/images/campaign.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+}
+.section-divider {
+  height: 140px;
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #1a1a1a 40%,
+    #f5f5f5 100%
+  );
+}
+.campaign::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.campaign-content {
+  position: relative;
+  max-width: 520px;
+  color: #fff;
+  z-index: 2;
+}
+
+.campaign-content h2 {
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.campaign-content p {
+  font-size: 17px;
+  line-height: 1.7;
+  opacity: 0.92;
+  margin-bottom: 36px;
+}
+
+.campaign-actions {
+  display: flex;
+  gap: 18px;
+}
+
+.primary-btn {
+  background: #fff;
+  color: #000;
+  padding: 14px 36px;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.outline-btn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 14px 36px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.outline-btn:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .campaign {
+    padding: 0 24px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .campaign-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .campaign-content h2 {
+    font-size: 36px;
+  }
+}

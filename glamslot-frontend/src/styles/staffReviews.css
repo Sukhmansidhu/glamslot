@@ -1,0 +1,147 @@
+.reviews-wrapper {
+  margin-top: 30px;
+}
+
+.reviews-title {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.reviews-loading,
+.reviews-empty {
+  font-size: 14px;
+  color: #777;
+}
+
+.review-card {
+  background: #fafafa;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 14px;
+  border: 1px solid #eee;
+  transition: all 0.35s ease;
+  animation: fadeUp 0.5s ease both;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.review-user {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.review-stars {
+  font-size: 14px;
+  color: #f5b50a;
+  margin-bottom: 6px;
+}
+
+.review-comment {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.review-date {
+  font-size: 12px;
+  color: #777;
+}
+
+.review-controls {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.review-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review-edit select,
+.review-edit textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 13px;
+}
+
+.review-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-primary {
+  background: #111;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: #000;
+}
+
+.btn-secondary {
+  background: #eee;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-danger-outline {
+  background: transparent;
+  border: 1px solid #ff4d4d;
+  color: #ff4d4d;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-danger-outline:hover {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .review-controls {
+    flex-direction: column;
+  }
+}

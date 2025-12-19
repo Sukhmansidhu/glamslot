@@ -1,0 +1,95 @@
+.payment-page {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  font-family: "Inter", system-ui, sans-serif;
+  animation: fadeUp 0.6s ease;
+}
+
+.payment-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.payment-empty {
+  font-size: 16px;
+  color: #666;
+}
+
+.payment-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  animation: scaleIn 0.4s ease;
+}
+
+.payment-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.payment-row.total {
+  font-size: 18px;
+}
+
+.payment-divider {
+  margin: 20px 0;
+  border: none;
+  height: 1px;
+  background: #eee;
+}
+
+.pay-btn {
+  margin-top: 30px;
+  padding: 14px 42px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #000, #222);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pay-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.pay-btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.payment-note {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #777;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

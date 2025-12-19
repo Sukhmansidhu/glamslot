@@ -1,0 +1,364 @@
+.orders-page {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Inter", system-ui, sans-serif;
+
+  background: linear-gradient(
+    180deg,
+    #f8fafc 0%,
+    #f1f5f9 40%,
+    #eef2f7 100%
+  );
+}
+.orders-title {
+  font-size: 38px;
+  margin-bottom: 35px;
+  letter-spacing: -0.6px;
+  position: relative;
+}
+
+.orders-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #000, #777);
+  display: block;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.order-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff, #fafafa);
+}
+
+.orders-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(0,0,0,0.04),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+.order-card::after {
+  content: "📦";
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 34px;
+  opacity: 0.15;
+}
+
+.order-card:hover::before {
+  animation: shimmer 1.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow:
+    0 35px 80px rgba(0,0,0,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.order-info {
+  flex: 1;
+}
+
+.order-info p {
+  margin: 6px 0;
+  color: #444;
+}
+
+.order-info::before {
+  content: "📦";
+  font-size: 28px;
+  background: #000;
+  color: #fff;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+
+.order-actions {
+  text-align: right;
+  min-width: 180px;
+}
+
+.order-total {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.status {
+  position: relative;
+}
+
+.status::after {
+  content: " • Live Tracking Enabled";
+  font-size: 11px;
+  color: #666;
+}
+
+.status.Paid {
+  color: #1976d2;
+  background: rgba(25,118,210,0.1);
+}
+
+.status.Processing {
+  color: #f59e0b;
+  background: rgba(245,158,11,0.15);
+}
+
+.status.Shipped {
+  color: #6a1b9a;
+  background: rgba(106,27,154,0.15);
+}
+
+.status.Delivered {
+  color: #16a34a;
+  background: rgba(22,163,74,0.15);
+}
+
+.status.Cancelled {
+  color: #dc2626;
+  background: rgba(220,38,38,0.15);
+}
+
+.btn {
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  margin: 8px 0 0 6px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #000, #333);
+  color: white;
+}
+.btn.primary:hover {
+  color: white;
+
+}
+.btn.secondary {
+  background: #6b7280;
+  color: white;
+}
+.btn.secondary:hover {
+  background: #4b5563;
+  color: white;
+}
+.btn.blue {
+  background: linear-gradient(135deg, #1976d2, #42a5f5);
+  color: white;
+}
+.btn.blue:hover {
+  background: linear-gradient(135deg, #1565c0, #1e88e5);
+  color: white;
+}
+.btn.danger {
+  background: linear-gradient(135deg, #e53935, #ff6f60);
+  color: white;
+}
+
+.btn.full {
+  width: 100%;
+  margin-top: 22px;
+}
+
+.order-timeline {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.timeline-step {
+  flex: 1;
+  text-align: center;
+}
+
+.timeline-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ddd, #eee);
+  margin-bottom: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-bar.active {
+  animation: progressGlow 1.6s infinite alternate;
+}
+
+@keyframes progressGlow {
+  from {
+    box-shadow: 0 0 0 rgba(0,128,0,0);
+  }
+  to {
+    box-shadow: 0 0 12px rgba(0,128,0,0.6);
+  }
+}
+
+.timeline-bar.active::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.5),
+    transparent
+  );
+  animation: flow 2s infinite;
+}
+
+.timeline-label {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.timeline-label.active {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.order-modal {
+  width: 520px;
+  margin-top: 20px;
+  height: 380px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 18px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.35);
+  animation: pop 0.25s ease;
+}
+
+.order-modal h2 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.order-modal h2::after {
+  content: " • Official Invoice";
+  font-size: 12px;
+  font-weight: 500;
+  color: #888;
+}
+
+.order-modal .status {
+  display: inline-block;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.order-modal .order-timeline {
+  margin: 14px 0 10px;
+  gap: 8px;
+}
+
+.order-modal .timeline-bar {
+  height: 8px;
+}
+
+.order-modal .item-row {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.order-modal .order-total {
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+.order-modal .btn.full {
+  background: linear-gradient(135deg, #ef4444, #f87171);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.item-row {
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.item-row:last-child {
+  border-bottom: none;
+}
+.btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes shimmer {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes flow {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .order-card {
+    flex-direction: column;
+  }
+
+  .order-actions {
+    text-align: left;
+  }
+}

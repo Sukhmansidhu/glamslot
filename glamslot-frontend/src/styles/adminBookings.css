@@ -1,0 +1,78 @@
+.admin-bookings {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.admin-bookings-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.admin-bookings-loading,
+.admin-bookings-empty {
+  font-size: 15px;
+  color: #666;
+}
+
+/* Booking Card */
+.admin-booking-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.admin-booking-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.admin-booking-card p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+/* Status */
+.booking-status {
+  margin-top: 8px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.booking-status.confirmed {
+  color: #d97706;
+}
+
+.booking-status.completed {
+  color: #16a34a;
+}
+
+.booking-status.cancelled {
+  color: #dc2626;
+}
+
+/* Actions */
+.admin-booking-actions {
+  margin-top: 12px;
+}
+
+.btn-complete {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-complete:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(22,163,74,0.35);
+}

@@ -1,0 +1,99 @@
+.admin-giftcards {
+  padding: 30px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.admin-giftcards-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.giftcard-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.giftcard-input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+}
+
+.giftcard-input:focus {
+  border-color: #000;
+}
+
+/* Button */
+.giftcard-btn {
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #111, #000);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.giftcard-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Divider */
+.giftcard-divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+/* List */
+.giftcard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.giftcard-item {
+  background: #fff;
+  padding: 14px 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease;
+}
+
+.giftcard-item:hover {
+  transform: translateY(-3px);
+}
+
+.giftcard-code {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.giftcard-amount {
+  font-weight: 600;
+}
+
+.giftcard-status {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.giftcard-status.active {
+  color: #16a34a;
+}
+
+.giftcard-status.used {
+  color: #dc2626;
+}
