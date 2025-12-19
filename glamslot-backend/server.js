@@ -7,17 +7,13 @@ const auth=require('./middlewares/auth')
 dotenv.config()
 
 const app=express()
-app.use(
-  cors({
-    origin: [
-      "https://glamslot-ten.vercel.app",
-      "http://localhost:3000"
-    ],
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
+app.use(cors({
+  origin: [
+    "https://glamslot-ten.vercel.app",
+    "http://localhost:3000"
+  ],
+  credentials: true
+}));
 
 // Handle preflight requests
 app.options("*", cors());
