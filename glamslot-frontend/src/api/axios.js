@@ -1,9 +1,26 @@
+// // api/axios.js
+// import axios from "axios";
+
+// const api = axios.create({
+//   // baseURL: "http://localhost:4000/api",
+//   baseURL:"https://glamslot-backend.onrender.com",
+// });
+
+// api.interceptors.request.use((config) => {
+//   const token = localStorage.getItem("token");
+//   if (token) {
+//     config.headers.Authorization = `Bearer ${token}`;
+//   }
+//   return config;
+// });
+
+// export default api;
+
 // api/axios.js
 import axios from "axios";
 
 const api = axios.create({
-  // baseURL: "http://localhost:4000/api",
-  baseURL:"https://glamslot-backend.onrender.com",
+  baseURL: "https://glamslot-backend.onrender.com/api",
 });
 
 api.interceptors.request.use((config) => {
