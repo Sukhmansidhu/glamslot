@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const sendGiftCardEmail = async (to, code, amount) => {
   try {
     await resend.emails.send({
-      from: "GlamSlot <onboarding@resend.dev>",
+      from: "GlamSlot <no-reply@glamslot.com>",
       to,
       subject: "🎁 Your GlamSlot Gift Card",
       html: `

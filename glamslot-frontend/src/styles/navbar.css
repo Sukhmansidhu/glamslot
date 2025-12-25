@@ -315,3 +315,72 @@ a:active,
 a:focus {
   text-decoration: none !important;
 }
+
+
+@media (max-width: 768px) {
+
+  /* Topbar */
+  .topbar {
+    height: 60px;
+    padding: 0 14px;
+  }
+
+  .logo {
+    font-size: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .top-actions,
+  .top-actions1 {
+    display: none;
+  }
+
+  .menu-btn {
+    font-size: 26px;
+  }
+
+  .sidebar {
+    top: 60px;
+    height: calc(100vh - 60px);
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .nav-links {
+    margin: 0;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    margin-left: 0 !important;
+  }
+
+  .wallet,
+  .login,
+  .logout,
+  .register {
+    margin: 0;
+    font-size: 15px;
+    padding: 6px 12px;
+  }
+
+  .social-footer {
+    bottom: 30px;
+  }
+
+  .social-footer a {
+    width: 44px;
+    height: 44px;
+  }
+
+  .social-footer img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .overlay {
+    inset: 60px 0 0 0;
+  }
+}
